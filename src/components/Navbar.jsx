@@ -13,8 +13,10 @@ export default function Navbar() {
     { name: "About", path: "/about" },
     { name: "Experience", path: "/experience" },
     { name: "Publications", path: "/publications" },
-    { name: "Projects", path: "/patents" },
-    { name: "Achievements", path: "/achievements" },
+    { name: "Patents", path: "/patents" },
+    { name: "Awards", path: "/awards" },
+    { name: "Memberships", path: "/memberships" },
+    // { name: "Achievements", path: "/achievements" },
     { name: "Contact", path: "/contact" },
   ];
 

@@ -2,8 +2,12 @@ import HeroSection from "../Home/HeroSection";
 import AboutSection from "../Home/AboutSection";
 import ExperienceSection from "../Home/ExperienceSection";
 import PublicationsSection from "../Home/PublicationsSection";
-import ProjectsSection from "../Home/ProjectsSection";
-import AchievementsSection from "../Home/AchievementsSection";
+// import ProjectsSection from "../Home/ProjectsSection";
+// import AchievementsSection from "../Home/AchievementsSection";
+import PatentSection from "../Home/PatentSection";
+import AwardSection from "../Home/AwardSection";
+import MembershipSection from "../Home/MembershipSection";
+// import ContactSection from "../Home/ContactSection";
 
 export default function Home() {
   return (
@@ -12,8 +16,12 @@ export default function Home() {
       <AboutSection />
       <ExperienceSection />
       <PublicationsSection />
-      <ProjectsSection />
-      <AchievementsSection />
+      <PatentSection />
+      <AwardSection />
+      <MembershipSection />
+      {/* <ContactSection /> */}
+      {/* <ProjectsSection /> */}
+      {/* <AchievementsSection /> */}
     </div>
   );
 }

@@ -48,7 +48,7 @@ export default function About() {
         {/* Ph.D. */}
         <motion.div
           whileHover={{ scale: 1.03 }}
-          className={`${theme.background} p-6 rounded-lg ${theme.shadow} border border-gray-200`}
+          className={`${theme.cardBg} p-4 rounded-lg ${theme.shadow} ${theme.border}`}
         >
           <FaGraduationCap className={`text-3xl mb-3 ${theme.secondary}`} />
           <h2 className={`font-semibold text-lg ${theme.primary} mb-2`}>
@@ -88,7 +88,7 @@ export default function About() {
         {/* M.E. */}
         <motion.div
           whileHover={{ scale: 1.03 }}
-          className={`${theme.background} p-6 rounded-lg ${theme.shadow} border border-gray-200`}
+          className={`${theme.cardBg} p-4 rounded-lg ${theme.shadow} ${theme.border}`}
         >
           <FaGraduationCap className={`text-3xl mb-3 ${theme.secondary}`} />
           <h2 className={`font-semibold text-lg ${theme.primary} mb-2`}>
@@ -111,7 +111,7 @@ export default function About() {
         {/* B.E. */}
         <motion.div
           whileHover={{ scale: 1.03 }}
-          className={`${theme.background} p-6 rounded-lg ${theme.shadow} border border-gray-200`}
+          className={`${theme.cardBg} p-4 rounded-lg ${theme.shadow} ${theme.border}`}
         >
           <FaGraduationCap className={`text-3xl mb-3 ${theme.secondary}`} />
           <h2 className={`font-semibold text-lg ${theme.primary} mb-2`}>
@@ -148,7 +148,7 @@ export default function About() {
           {/* Principal */}
           <motion.div
             whileHover={{ scale: 1.03 }}
-            className={`${theme.background} p-6 rounded-lg ${theme.shadow} border border-gray-200`}
+            className={`${theme.cardBg} p-4 rounded-lg ${theme.shadow} ${theme.border}`}
           >
             <FaUniversity className={`text-3xl mb-3 ${theme.secondary}`} />
             <h2 className={`font-semibold text-lg ${theme.primary} mb-2`}>
@@ -167,7 +167,7 @@ export default function About() {
           {/* Director */}
           <motion.div
             whileHover={{ scale: 1.03 }}
-            className={`${theme.background} p-6 rounded-lg ${theme.shadow} border border-gray-200`}
+            className={`${theme.cardBg} p-4 rounded-lg ${theme.shadow} ${theme.border}`}
           >
             <FaUniversity className={`text-3xl mb-3 ${theme.secondary}`} />
             <h2 className={`font-semibold text-lg ${theme.primary} mb-2`}>
@@ -187,7 +187,7 @@ export default function About() {
           {/* Director */}
           <motion.div
             whileHover={{ scale: 1.03 }}
-            className={`${theme.background} p-6 rounded-lg ${theme.shadow} border border-gray-200`}
+            className={`${theme.cardBg} p-4 rounded-lg ${theme.shadow} ${theme.border}`}
           >
             <FaUniversity className={`text-3xl mb-3 ${theme.secondary}`} />
             <h2 className={`font-semibold text-lg ${theme.primary} mb-2`}>

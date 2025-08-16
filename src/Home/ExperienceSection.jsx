@@ -25,7 +25,7 @@ export default function ExperienceSection() {
 
       {/* Card */}
       <motion.div
-        className={`${theme.cardBg} p-6 rounded-lg ${theme.shadow} border border-gray-200`}
+        className={`${theme.cardBg} p-6 rounded-lg ${theme.shadow} ${theme.border}`}
         whileHover={{ y: -5 }}
       >
         {/* Academic Experience */}
@@ -34,7 +34,7 @@ export default function ExperienceSection() {
         </motion.h3>
         <div className="space-y-4">
           <motion.div
-            className={`border-l-4 ${theme.secondary} pl-4`}
+            className={`border-l-4 ${theme.secondary} pl-4 ${theme.background} p-3 rounded`}
             whileHover={{ x: 5 }}
           >
             <h4 className={`font-semibold ${theme.text}`}>
@@ -46,7 +46,7 @@ export default function ExperienceSection() {
           </motion.div>
 
           <motion.div
-            className={`border-l-4 ${theme.secondary} pl-4`}
+            className={`border-l-4 ${theme.secondary} pl-4 ${theme.background} p-3 rounded`}
             whileHover={{ x: 5 }}
           >
             <h4 className={`font-semibold ${theme.text}`}>
@@ -59,7 +59,7 @@ export default function ExperienceSection() {
           </motion.div>
 
           <motion.div
-            className={`border-l-4 ${theme.secondary} pl-4`}
+            className={`border-l-4 ${theme.secondary} pl-4 ${theme.background} p-3 rounded`}
             whileHover={{ x: 5 }}
           >
             <h4 className={`font-semibold ${theme.text}`}>
@@ -80,7 +80,7 @@ export default function ExperienceSection() {
         </motion.h3>
         <div className="space-y-4">
           <motion.div
-            className={`border-l-4 ${theme.secondary} pl-4`}
+            className={`border-l-4 ${theme.secondary} pl-4 ${theme.background} p-3 rounded`}
             whileHover={{ x: 5 }}
           >
             <h4 className={`font-semibold ${theme.text}`}>
@@ -93,7 +93,7 @@ export default function ExperienceSection() {
           </motion.div>
 
           <motion.div
-            className={`border-l-4 ${theme.secondary} pl-4`}
+            className={`border-l-4 ${theme.secondary} pl-4 ${theme.background} p-3 rounded`}
             whileHover={{ x: 5 }}
           >
             <h4 className={`font-semibold ${theme.text}`}>
@@ -112,7 +112,7 @@ export default function ExperienceSection() {
           <motion.button
             whileHover={{ scale: 1.05 }}
             onClick={() => navigate("/experience")}
-            className="px-5 py-2 rounded-md bg-blue-700 text-white font-medium shadow hover:bg-blue-800 transition"
+            className={`px-5 py-2 rounded-md ${theme.button} font-medium ${theme.shadow} ${theme.buttonHover}`}
           >
             Read More →
           </motion.button>

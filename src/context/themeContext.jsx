@@ -37,6 +37,7 @@ const lightTheme = {
   name: "light",
   background: "bg-gray-50",
   navBg: "bg-[#1E3A8A]",
+  mobileMenuBg: "bg-[#1E3A8A]", // ✅ added
   text: "text-[#1F2937]",
   navText: "text-white",
   primary: "text-[#1E3A8A]",
@@ -54,6 +55,7 @@ const darkTheme = {
   name: "dark",
   background: "bg-gray-900",
   navBg: "bg-gray-800",
+  mobileMenuBg: "bg-gray-900", // ✅ added
   text: "text-gray-100",
   navText: "text-white",
   primary: "text-[#F59E0B]",

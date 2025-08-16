@@ -31,7 +31,7 @@ export default function AboutSection() {
 
       {/* Card */}
       <motion.div
-        className={`${theme.cardBg} p-6 rounded-xl ${theme.shadow} border border-gray-200`}
+        className={`${theme.cardBg} p-6 rounded-xl ${theme.shadow} ${theme.border}`}
         whileHover={{ y: -5 }}
       >
         {/* Short Bio */}
@@ -41,7 +41,7 @@ export default function AboutSection() {
         <div className="grid md:grid-cols-2 gap-6">
           {/* Education */}
           <motion.div
-            className={`${theme.background} p-5 rounded-lg`}
+            className={`${theme.background} p-5 rounded-lg ${theme.border}`}
             whileHover={{ scale: 1.02 }}
           >
             <h3 className={`font-semibold text-lg ${theme.primary} mb-3`}>
@@ -77,7 +77,7 @@ export default function AboutSection() {
 
           {/* Key Positions */}
           <motion.div
-            className={`${theme.background} p-5 rounded-lg`}
+            className={`${theme.background} p-5 rounded-lg ${theme.border}`}
             whileHover={{ scale: 1.02 }}
           >
             <h3 className={`font-semibold text-lg ${theme.primary} mb-3`}>
@@ -111,7 +111,7 @@ export default function AboutSection() {
           <motion.button
             whileHover={{ scale: 1.05 }}
             onClick={() => navigate("/about")}
-            className="px-5 py-2 rounded-md bg-blue-700 text-white font-medium shadow hover:bg-blue-800 transition"
+            className={`px-5 py-2 rounded-md ${theme.button} font-medium ${theme.shadow} ${theme.buttonHover}`}
           >
             Read More →
           </motion.button>
