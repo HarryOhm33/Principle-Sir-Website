@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { FaLinkedin, FaTwitter, FaGithub, FaEnvelope } from "react-icons/fa";
 import { useTheme } from "../context/themeContext";
+import { Link } from "react-router-dom";
 
 export default function Footer() {
   const { theme } = useTheme();
@@ -8,7 +9,7 @@ export default function Footer() {
   const socialLinks = [
     {
       icon: <FaLinkedin className="text-xl" />,
-      url: "https://linkedin.com",
+      url: "https://www.linkedin.com/in/dr-sandeep-tiwari-7a186029",
       label: "LinkedIn",
     },
     {
@@ -23,9 +24,20 @@ export default function Footer() {
     },
     {
       icon: <FaEnvelope className="text-xl" />,
-      url: "mailto:contact@example.com",
+      url: "mailto:sandeeptiwari1970@gmail.com",
       label: "Email",
     },
+  ];
+
+  const navLinks = [
+    { name: "Home", path: "/" },
+    { name: "About", path: "/about" },
+    { name: "Experience", path: "/experience" },
+    { name: "Publications", path: "/publications" },
+    { name: "Patents", path: "/patents" },
+    { name: "Awards", path: "/awards" },
+    { name: "Memberships", path: "/memberships" },
+    { name: "Contact", path: "/contact" },
   ];
 
   return (
@@ -37,7 +49,7 @@ export default function Footer() {
       className={`${theme.cardBg} ${theme.shadow} mt-16`}
     >
       <div className="max-w-6xl mx-auto px-4 py-8">
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8">
           {/* About Section */}
           <motion.div whileHover={{ y: -5 }}>
             <h3 className={`text-xl font-bold mb-4 ${theme.primary}`}>
@@ -55,46 +67,16 @@ export default function Footer() {
               Quick Links
             </h3>
             <ul className="space-y-2">
-              <motion.li whileHover={{ x: 5 }}>
-                <a
-                  href="#about"
-                  className={`${theme.text} hover:${theme.secondary} transition`}
-                >
-                  About
-                </a>
-              </motion.li>
-              <motion.li whileHover={{ x: 5 }}>
-                <a
-                  href="#experience"
-                  className={`${theme.text} hover:${theme.secondary} transition`}
-                >
-                  Experience
-                </a>
-              </motion.li>
-              <motion.li whileHover={{ x: 5 }}>
-                <a
-                  href="#publications"
-                  className={`${theme.text} hover:${theme.secondary} transition`}
-                >
-                  Publications
-                </a>
-              </motion.li>
-              <motion.li whileHover={{ x: 5 }}>
-                <a
-                  href="#projects"
-                  className={`${theme.text} hover:${theme.secondary} transition`}
-                >
-                  Projects
-                </a>
-              </motion.li>
-              <motion.li whileHover={{ x: 5 }}>
-                <a
-                  href="#achievements"
-                  className={`${theme.text} hover:${theme.secondary} transition`}
-                >
-                  Achievements
-                </a>
-              </motion.li>
+              {navLinks.map((link, index) => (
+                <motion.li whileHover={{ x: 5 }} key={index}>
+                  <Link
+                    to={link.path}
+                    className={`${theme.text} hover:${theme.secondary} transition font-medium`}
+                  >
+                    {link.name}
+                  </Link>
+                </motion.li>
+              ))}
             </ul>
           </motion.div>
 
@@ -119,9 +101,8 @@ export default function Footer() {
                 </motion.a>
               ))}
             </div>
-            <p className={`mt-4 ${theme.text}`}>
-              Darbhanga College of Engineering
-              <br />
+            <p className={`mt-4 text-sm ${theme.text}`}>
+              Darbhanga College of Engineering <br />
               Darbhanga, Bihar, India
             </p>
           </motion.div>
