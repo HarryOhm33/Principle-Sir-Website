@@ -35,9 +35,15 @@ export default function Contact() {
     },
     {
       icon: <FaMapMarkerAlt className={`text-xl ${theme.secondary}`} />,
-      label: "Address",
+      label: "Permanent Address",
       value: "CPC-001, Omaxe Palm Green Society, Sector MU, Greater Noida",
       link: "https://goo.gl/maps/example",
+    },
+    {
+      icon: <FaMapMarkerAlt className={`text-xl ${theme.secondary}`} />,
+      label: "Current Address",
+      value: "Darbhanga College of Engineering, Darbhanga, Bihar, India",
+      link: "https://goo.gl/maps/z3L1E3Pz2CjLrEgu8", // <-- optional: add Google Maps link
     },
     {
       icon: <FaLinkedin className={`text-xl ${theme.secondary}`} />,
