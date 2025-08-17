@@ -10,7 +10,7 @@ export default function HeroSection() {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
-      className="flex flex-col-reverse lg:flex-row items-center justify-between gap-16 lg:gap-28 mt-31 md:mt-28 mb-35 md:mb-32 px-4 md:px-12"
+      className="flex flex-col-reverse lg:flex-row items-center justify-between gap-16 lg:gap-28 mt-25 md:mt-28 mb-35 md:mb-32 px-4 md:px-12"
     >
       {/* Left Side - Text Content */}
       <div className="text-center lg:text-left max-w-2xl w-full">
