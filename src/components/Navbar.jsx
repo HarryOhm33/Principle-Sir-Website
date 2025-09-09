@@ -3,8 +3,10 @@ import { useState } from "react";
 import { FaBars, FaTimes, FaSun, FaMoon } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
 import { useTheme } from "../context/themeContext";
+import { useNavigate } from "react-router-dom";
 
 export default function Navbar() {
+  const navigate = useNavigate();
   const [isOpen, setIsOpen] = useState(false);
   const { darkMode, toggleTheme, theme } = useTheme();
 
@@ -47,12 +49,10 @@ export default function Navbar() {
       {/* Logo/Name */}
       <motion.div
         whileHover={{ scale: 1.05 }}
-        className="font-bold text-xl md:text-2xl flex items-center"
+        className="font-bold text-xl md:text-2xl flex items-center cursor-pointer"
+        onClick={() => navigate("/")}
       >
-        <span className="bg-[#F59E0B] text-[#1E3A8A] px-2 py-1 rounded mr-2 text-sm md:text-base">
-          Dr.
-        </span>
-        <span>Sandeep Tiwari</span>
+        <span>Dr. Sandeep Tiwari</span>
       </motion.div>
 
       {/* Desktop Navigation */}
