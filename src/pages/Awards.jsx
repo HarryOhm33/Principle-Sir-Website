@@ -1,5 +1,11 @@
 import { motion } from "framer-motion";
-import { FaAward, FaMedal, FaTrophy } from "react-icons/fa";
+import {
+  FaAward,
+  FaMedal,
+  FaTrophy,
+  FaCertificate,
+  FaGraduationCap,
+} from "react-icons/fa";
 import { useTheme } from "../context/themeContext";
 
 export default function Awards() {
@@ -7,46 +13,52 @@ export default function Awards() {
 
   const awards = [
     {
-      title: "Best Research Paper Award",
-      year: "2015",
-      description:
-        "Awarded at International Conference on Mechanical Engineering for excellence in sustainable machining research",
-      icon: <FaMedal className={`text-2xl ${theme.secondary}`} />,
-    },
-    {
-      title: "Excellence in Teaching Award",
-      year: "2018",
-      description:
-        "Recognized by State Technical University for innovative teaching methods and academic leadership",
-      icon: <FaTrophy className={`text-2xl ${theme.secondary}`} />,
-    },
-    {
-      title: "Outstanding Contribution in Mechanical Engineering",
+      title: "CMI Level 5 Award, UK",
       year: "2021",
       description:
-        "For advancing research in environmentally conscious machining",
-      icon: <FaAward className={`text-2xl ${theme.secondary}`} />,
+        "Given by Chartered Management, United Kingdom AICTE/UKIERI Leadership & Management Programme International Youth Fellowship (IYF), South Korea for Management and Leadership excellence.",
+      contribution: "Management and Leadership",
+      icon: <FaMedal className={`text-2xl ${theme.secondary}`} />,
     },
     {
       title: "Global Education Award",
       year: "2019",
       description:
-        "For untiring contribution to promote higher education by International Youth Fellowship (IYF), South Korea",
-      icon: <FaMedal className={`text-2xl ${theme.secondary}`} />,
+        "Awarded by International Youth Fellowship (IYF), South Korea for outstanding contribution to promote higher education globally.",
+      contribution: "Contribution to Promote Higher Education",
+      icon: <FaTrophy className={`text-2xl ${theme.secondary}`} />,
     },
     {
-      title: "Corona COVID-19 Fighter Award",
-      year: "2020",
+      title: "Certificate of Appreciation",
+      year: "2021",
       description:
-        "By Drop Roball Federation of India for providing help to the public during COVID-19 crisis",
+        "Awarded by Rashtriya Shakshik Mahasangh, Uttar Pradesh for exceptional contributions and dedication to the education sector.",
+      contribution: "Great Contribution in Education Sector",
+      icon: <FaCertificate className={`text-2xl ${theme.secondary}`} />,
+    },
+    {
+      title: "Awarded for Excellence",
+      year: "2007",
+      description:
+        "Recognized by G.L.A. Institute of Technology and Management, Mathura for outstanding performance and excellence in academic contributions.",
+      contribution: "Excellence in Academic Performance",
       icon: <FaAward className={`text-2xl ${theme.secondary}`} />,
     },
     {
-      title: "Academic Performance Award",
-      year: "Multiple Years",
+      title: "Certificate of Appreciation and Recognition",
+      year: "2025",
       description:
-        "For excellence in academic performance at G.L.A. Institute of Technology and Management, Mathura",
-      icon: <FaTrophy className={`text-2xl ${theme.secondary}`} />,
+        "Awarded by UNACCC for demonstrated commitment to advancing Sustainable Development Goals through innovative educational initiatives.",
+      contribution: "Commitment to advancing Sustainable development goals",
+      icon: <FaCertificate className={`text-2xl ${theme.secondary}`} />,
+    },
+    {
+      title: "CMI Level 5 Award in Management and Leadership",
+      year: "2021",
+      description:
+        "Completion of the AICTE/UKIERI Leadership & Management Programme, recognizing advanced skills in educational leadership and institutional management.",
+      contribution: "Fellow of Academy/Professional Societies",
+      icon: <FaGraduationCap className={`text-2xl ${theme.secondary}`} />,
     },
   ];
 
@@ -79,19 +91,33 @@ export default function Awards() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 * index }}
             whileHover={{ scale: 1.02 }}
-            className={`${theme.cardBg} p-6 rounded-xl ${theme.shadow} ${theme.border} flex items-start`}
+            className={`${theme.cardBg} p-6 rounded-xl ${theme.shadow} ${theme.border}`}
           >
-            <div
-              className={`p-3 rounded-full ${theme.secondaryBg} mr-4 flex-shrink-0`}
-            >
-              {award.icon}
+            <div className="flex items-start mb-4">
+              <div
+                className={`p-3 rounded-full ${theme.secondaryBg} mr-4 flex-shrink-0`}
+              >
+                {award.icon}
+              </div>
+              <div>
+                <h3 className={`text-xl font-semibold ${theme.text}`}>
+                  {award.title}
+                </h3>
+                <p className={`${theme.accent} text-sm`}>{award.year}</p>
+              </div>
             </div>
-            <div>
-              <h3 className={`text-xl font-semibold ${theme.text}`}>
-                {award.title}
-              </h3>
-              <p className={`${theme.accent} text-sm mb-2`}>{award.year}</p>
-              <p className={`${theme.text} opacity-90`}>{award.description}</p>
+
+            <div className="mb-3">
+              <p className={`${theme.text} opacity-90 mb-2`}>
+                {award.description}
+              </p>
+            </div>
+
+            <div className={`${theme.border} border-t pt-3`}>
+              <p className={`text-sm ${theme.accent} font-medium`}>
+                <span className="font-semibold">Contribution: </span>
+                {award.contribution}
+              </p>
             </div>
           </motion.div>
         ))}
@@ -105,7 +131,7 @@ export default function Awards() {
         className={`mt-12 ${theme.cardBg} p-6 rounded-xl ${theme.shadow} ${theme.border}`}
       >
         <h2 className={`text-2xl font-semibold mb-4 ${theme.primary}`}>
-          Other Recognitions
+          Other Recognitions & Appointments
         </h2>
         <ul className="space-y-3">
           <motion.li
@@ -138,6 +164,13 @@ export default function Awards() {
             <span className={`mr-2 ${theme.secondary}`}>•</span>
             Certificate of Appreciation for contribution in Education Sector by
             Rashtriya Shakshik Mahasangh
+          </motion.li>
+          <motion.li
+            className={`${theme.text} flex items-start`}
+            whileHover={{ x: 5 }}
+          >
+            <span className={`mr-2 ${theme.secondary}`}>•</span>
+            Fellow of Chartered Management Institute (CMI), UK - Level 5 Award
           </motion.li>
         </ul>
       </motion.div>

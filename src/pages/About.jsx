@@ -103,7 +103,7 @@ export default function About() {
             </p>
             <p>
               <strong>Institution:</strong> University of Roorkee (Now Indian
-              Institute of Technology), Roorkee
+              Institute of Technology, Roorkee)
             </p>
           </div>
         </motion.div>

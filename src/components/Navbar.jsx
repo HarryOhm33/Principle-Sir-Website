@@ -15,8 +15,8 @@ export default function Navbar() {
     { name: "Publications", path: "/publications" },
     { name: "Patents", path: "/patents" },
     { name: "Awards", path: "/awards" },
+    { name: "Achievements", path: "/achievements" },
     { name: "Memberships", path: "/memberships" },
-    // { name: "Achievements", path: "/achievements" },
     { name: "Contact", path: "/contact" },
   ];
 

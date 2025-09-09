@@ -3,7 +3,7 @@ import AboutSection from "../Home/AboutSection";
 import ExperienceSection from "../Home/ExperienceSection";
 import PublicationsSection from "../Home/PublicationsSection";
 // import ProjectsSection from "../Home/ProjectsSection";
-// import AchievementsSection from "../Home/AchievementsSection";
+import AchievementSection from "../Home/AchievementSection";
 import PatentSection from "../Home/PatentSection";
 import AwardSection from "../Home/AwardSection";
 import MembershipSection from "../Home/MembershipSection";
@@ -18,10 +18,10 @@ export default function Home() {
       <PublicationsSection />
       <PatentSection />
       <AwardSection />
+      <AchievementSection />
       <MembershipSection />
       {/* <ContactSection /> */}
       {/* <ProjectsSection /> */}
-      {/* <AchievementsSection /> */}
     </div>
   );
 }

@@ -42,7 +42,7 @@ const lightTheme = {
   navText: "text-white",
   primary: "text-[#1E3A8A]",
   secondary: "text-[#F59E0B]",
-  accent: "text-[#9CA3AF]",
+  accent: "text-gray-600",
   cardBg: "bg-white",
   button: "bg-[#1E3A8A] text-white",
   buttonHover: "hover:bg-[#1D4ED8]",

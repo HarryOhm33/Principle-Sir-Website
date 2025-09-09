@@ -9,19 +9,19 @@ export default function AwardSection() {
 
   const awards = [
     {
-      title: "Best Research Paper Award",
-      year: "2015",
-      desc: "Awarded at International Conference on Mechanical Engineering for excellence in sustainable machining research.",
-    },
-    {
-      title: "Excellence in Teaching Award",
-      year: "2018",
-      desc: "Recognized by State Technical University for innovative teaching methods and academic leadership.",
-    },
-    {
-      title: "Outstanding Contribution in Mechanical Engineering",
+      title: "CMI Level 5 Award, UK",
       year: "2021",
-      desc: "For advancing research in environmentally conscious machining.",
+      desc: "Given by Chartered Management, United Kingdom AICTE/UKIERI Leadership & Management Programme International Youth Fellowship (IYF), South Korea.",
+    },
+    {
+      title: "Global Education Award",
+      year: "2019",
+      desc: "Awarded by International Youth Fellowship (IYF), South Korea for contribution to Promote Higher Education.",
+    },
+    {
+      title: "Certificate of Appreciation",
+      year: "2021",
+      desc: "Rashtriya Shakshik Mahasangh, Uttar Pradesh for Great Contribution in Education Sector.",
     },
   ];
 
