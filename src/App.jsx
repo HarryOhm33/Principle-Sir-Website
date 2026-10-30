@@ -11,6 +11,7 @@ import { ThemeProvider } from "./context/themeContext";
 import Footer from "./components/Footer";
 import Awards from "./pages/Awards";
 import Memberships from "./pages/Memberships";
+import NotFound from "./pages/NotFound";
 import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
           <Route path="/memberships" element={<Memberships />} />
           <Route path="/achievements" element={<Achievements />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
         <Footer />
       </BrowserRouter>

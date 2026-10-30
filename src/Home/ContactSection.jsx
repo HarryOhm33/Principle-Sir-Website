@@ -21,23 +21,28 @@ export default function ContactSection() {
       </motion.h2>
 
       <motion.div
-        className={`${theme.cardBg} p-6 rounded-lg ${theme.shadow} text-center`}
+        className={`${theme.cardBg} p-6 rounded-lg ${theme.shadow} border ${theme.border} text-center space-y-2`}
         whileHover={{ y: -5 }}
       >
         <p className={theme.text}>
           📧 Email:{" "}
-          <a href="mailto:sandeep@example.com" className="underline">
-            sandeep@example.com
+          <a href="mailto:sandeeptiwari1970@gmail.com" className="underline font-medium">
+            sandeeptiwari1970@gmail.com
           </a>
         </p>
         <p className={theme.text}>
           🔗 LinkedIn:{" "}
-          <a href="https://linkedin.com/in/dr-sandeep" className="underline">
-            linkedin.com/in/dr-sandeep
+          <a
+            href="https://www.linkedin.com/in/dr-sandeep-tiwari-7a180629"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline font-medium"
+          >
+            linkedin.com/in/dr-sandeep-tiwari-7a180629
           </a>
         </p>
-        <p className={theme.text}>
-          📍 Principal, Darbhanga College of Engineering, Bihar
+        <p className={`${theme.accent} text-sm`}>
+          📍 Director, Sub Regional Science City and Innovation Hub, Bodh Gaya (on deputation) | Principal, GEC Sheikhpura
         </p>
       </motion.div>
     </motion.section>

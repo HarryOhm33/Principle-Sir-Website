@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { FaTrophy, FaFlask, FaBriefcase } from "react-icons/fa";
+import { FaTrophy, FaFlask, FaRocket, FaGraduationCap } from "react-icons/fa";
 import { useTheme } from "../context/themeContext";
 import { useNavigate } from "react-router-dom";
 
@@ -7,34 +7,43 @@ export default function AchievementSection() {
   const { theme } = useTheme();
   const navigate = useNavigate();
 
-  const researchProjects = [
+  const keyProjects = [
     {
-      title: "Finishing School of 3D Printing and Additive Manufacturing",
-      fundingAgency: "CDAC, MEITY, Govt. Of India",
-      position: "Principal Investigator (PI)",
-      duration: "2025 - 2030",
-      amount: "Approx. 6 Crores",
+      title: "Finishing School for 3D Printing and Additive Manufacturing",
+      fundingAgency: "C-DAC Kolkata, MeitY (Govt. of India)",
+      amount: "₹6.00 Crore",
+      detail: "505 trained (336 DCE students, 169 external) with 18 placements at L&T, JSW, and Reliance.",
     },
     {
-      title: "IoT & Drone based Agriculture Monitoring System",
-      fundingAgency: "MMMUT, Gorakhpur",
-      position: "Co-Principal Investigator",
-      duration: "2020 - 2022",
+      title: "IoT & Drone-Based Agriculture Monitoring System",
+      fundingAgency: "MMMUT Gorakhpur (Nodal Agency) / REC Ambedkar Nagar",
+      amount: "₹289.50 Lakh Total",
+      detail: "Deployment of smart sensors and agricultural drones for rural community skill empowerment.",
+    },
+    {
+      title: "Innovation, Incubation & Entrepreneurship Research Grants",
+      fundingAgency: "EDI Ahmedabad, AICTE, DST, MeitY, AKTU",
+      amount: "₹118.88 Lakh",
+      detail: "15 prototypes developed; 4-Star rating for Institution Innovation Council at KEC Ghaziabad.",
     },
   ];
 
-  const leadershipRoles = [
+  const flagshipMilestones = [
     {
-      institution: "Krishna Engineering College, Ghaziabad",
-      position: "Director",
-      period: "2017 - 2021",
-      achievement: "Secured funding of ₹1.18+ Crores during tenure",
+      title: "MIITIE Incubation Centre",
+      desc: "First incubation centre at a state-govt engineering college in Bihar. 30 startups onboarded with ₹10L each from Bihar Startup Trust Fund.",
     },
     {
-      institution: "DCE Darbhanga",
-      position: "Principal",
-      period: "2022 - Present",
-      achievement: "Established 3D Printing Finishing School (6 Cr. Project)",
+      title: "Historic Placement Record – ₹43 LPA",
+      desc: "Record package at ServiceNow for the 2020–24 batch, the highest across all DSTTE Bihar engineering colleges; 80+ placements.",
+    },
+    {
+      title: "16 Institutional MoUs with 35+ Organisations",
+      desc: "Collaborations signed with IIT Patna, IIT Roorkee, Tezpur University, NIELIT, C-DAC, and industrial leaders.",
+    },
+    {
+      title: "Arsenic-Safe Water & Rural Outreach",
+      desc: "Installed Tezpur University's patented Arsiron Nilogon filters in campus hostels and rural households in Mahinam Benipur.",
     },
   ];
 
@@ -44,7 +53,7 @@ export default function AchievementSection() {
       whileInView={{ opacity: 1 }}
       viewport={{ once: true }}
       transition={{ duration: 0.8 }}
-      className="max-w-6xl mx-auto px-4 py-12"
+      className="mb-10 sm:mb-16"
       id="achievements"
     >
       <motion.div
@@ -54,10 +63,34 @@ export default function AchievementSection() {
         className="mb-8"
       >
         <h2
-          className={`text-3xl font-bold ${theme.primary} flex items-center mb-6`}
+          className={`text-3xl font-bold ${theme.primary} flex items-center mb-2`}
         >
-          <FaTrophy className="mr-3" /> Key Achievements
+          <FaTrophy className="mr-3" /> Key Achievements & Flagship Initiatives
         </h2>
+        <div className={`h-1 w-20 ${theme.primaryBg} rounded-full`}></div>
+      </motion.div>
+
+      {/* Flagship Milestones Grid */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ delay: 0.3 }}
+        className="grid sm:grid-cols-2 gap-4 mb-8"
+      >
+        {flagshipMilestones.map((m, idx) => (
+          <motion.div
+            key={idx}
+            whileHover={{ scale: 1.02 }}
+            className={`${theme.cardBg} p-5 rounded-xl ${theme.shadow} ${theme.border} border border-l-4 ${theme.secondary}`}
+          >
+            <h4 className={`font-semibold ${theme.text} mb-2 flex items-center`}>
+              <FaRocket className={`mr-2 ${theme.secondaryText}`} />
+              {m.title}
+            </h4>
+            <p className={`${theme.accent} text-sm leading-relaxed`}>{m.desc}</p>
+          </motion.div>
+        ))}
       </motion.div>
 
       {/* Research Projects Summary */}
@@ -65,80 +98,37 @@ export default function AchievementSection() {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
-        transition={{ delay: 0.3 }}
-        className="mb-8"
+        transition={{ delay: 0.35 }}
+        className="mb-6"
       >
         <div className="flex items-center mb-4">
           <FaFlask className={`text-2xl mr-3 ${theme.secondary}`} />
           <h3 className={`text-xl font-semibold ${theme.primary}`}>
-            Research Projects
+            Major Nationally Funded Projects
           </h3>
         </div>
 
         <div className="space-y-4">
-          {researchProjects.map((project, index) => (
+          {keyProjects.map((project, index) => (
             <motion.div
-              key={`project-${index}`}
-              initial={{ opacity: 0, y: 20 }}
+              key={index}
+              initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1 * index }}
-              className={`${theme.cardBg} p-4 rounded-lg ${theme.shadow}`}
+              className={`${theme.cardBg} p-4 rounded-lg ${theme.shadow} border ${theme.border}`}
             >
-              <h4 className={`font-semibold ${theme.text} mb-2`}>
-                {project.title}
-              </h4>
-              <div className="flex flex-wrap items-center gap-4 text-sm">
-                <span className={theme.accent}>{project.fundingAgency}</span>
-                <span className={theme.accent}>•</span>
-                <span className={theme.accent}>{project.position}</span>
-                <span className={theme.accent}>•</span>
-                <span className={theme.accent}>{project.duration}</span>
-              </div>
-              {project.amount && (
-                <p className={`text-sm ${theme.text} mt-2`}>
-                  <span className="font-medium">Funding: </span>
-                  {project.amount}
-                </p>
-              )}
-            </motion.div>
-          ))}
-        </div>
-      </motion.div>
-
-      {/* Leadership Roles Summary */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true }}
-        transition={{ delay: 0.4 }}
-        className="mb-6"
-      >
-        <div className="flex items-center mb-4">
-          <FaBriefcase className={`text-2xl mr-3 ${theme.secondary}`} />
-          <h3 className={`text-xl font-semibold ${theme.primary}`}>
-            Leadership Roles
-          </h3>
-        </div>
-
-        <div className="space-y-4">
-          {leadershipRoles.map((role, index) => (
-            <motion.div
-              key={`role-${index}`}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.1 * index }}
-              className={`${theme.cardBg} p-4 rounded-lg ${theme.shadow}`}
-            >
-              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-2">
+              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-1">
                 <h4 className={`font-semibold ${theme.text}`}>
-                  {role.institution}
+                  {project.title}
                 </h4>
-                <span className={`text-sm ${theme.accent} mt-1 sm:mt-0`}>
-                  {role.period}
+                <span className={`text-sm font-bold ${theme.primary} mt-1 sm:mt-0`}>
+                  {project.amount}
                 </span>
               </div>
-              <p className={`text-sm ${theme.accent} mb-2`}>{role.position}</p>
-              <p className={`text-sm ${theme.text}`}>{role.achievement}</p>
+              <p className={`text-xs ${theme.secondaryText} mb-1.5 font-medium`}>
+                {project.fundingAgency}
+              </p>
+              <p className={`text-sm ${theme.accent}`}>{project.detail}</p>
             </motion.div>
           ))}
         </div>
@@ -151,7 +141,7 @@ export default function AchievementSection() {
           onClick={() => navigate("/achievements")}
           className={`px-5 py-2 rounded-md ${theme.button} font-medium ${theme.shadow} ${theme.buttonHover}`}
         >
-          View More Details →
+          View All Achievements, MoUs & Initiatives →
         </motion.button>
       </div>
     </motion.section>

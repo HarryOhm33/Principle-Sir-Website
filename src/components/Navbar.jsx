@@ -52,7 +52,7 @@ export default function Navbar() {
         className="font-bold text-xl md:text-2xl flex items-center cursor-pointer"
         onClick={() => navigate("/")}
       >
-        <span>Dr. Sandeep Tiwari</span>
+        <span>Prof. (Dr.) Sandeep Tiwari</span>
       </motion.div>
 
       {/* Desktop Navigation */}
@@ -77,7 +77,7 @@ export default function Navbar() {
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
           onClick={toggleTheme}
-          className="ml-4 p-2 rounded-full focus:outline-none"
+          className="ml-4 p-2 rounded-full focus:outline-none cursor-pointer"
           aria-label={`Switch to ${darkMode ? "light" : "dark"} mode`}
         >
           {darkMode ? (
@@ -94,7 +94,7 @@ export default function Navbar() {
         <motion.button
           whileTap={{ scale: 0.9 }}
           onClick={toggleTheme}
-          className="p-2 rounded-full focus:outline-none"
+          className="p-2 rounded-full focus:outline-none cursor-pointer"
           aria-label={`Switch to ${darkMode ? "light" : "dark"} mode`}
         >
           {darkMode ? (
@@ -107,7 +107,7 @@ export default function Navbar() {
         {/* Mobile menu button */}
         <motion.button
           whileTap={{ scale: 0.9 }}
-          className="text-xl focus:outline-none"
+          className="text-xl focus:outline-none cursor-pointer"
           onClick={() => setIsOpen(!isOpen)}
           aria-label="Toggle menu"
         >

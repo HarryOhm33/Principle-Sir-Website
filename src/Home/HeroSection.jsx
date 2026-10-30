@@ -10,7 +10,7 @@ export default function HeroSection() {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
-      className="flex flex-col-reverse lg:flex-row items-center justify-between gap-16 lg:gap-28 mt-25 md:mt-28 mb-35 md:mb-32 px-4 md:px-12"
+      className="flex flex-col-reverse lg:flex-row items-center justify-between gap-8 lg:gap-16 mt-4 sm:mt-8 md:mt-12 lg:mt-16 xl:mt-20 mb-10 sm:mb-16 md:mb-20 lg:mb-40 xl:mb-52 lg:min-h-[calc(100vh-14rem)] px-2 sm:px-4 md:px-8"
     >
       {/* Left Side - Text Content */}
       <div className="text-center lg:text-left max-w-2xl w-full">
@@ -23,14 +23,22 @@ export default function HeroSection() {
           Prof. (Dr.) Sandeep Tiwari
         </motion.h1>
 
-        <motion.p
+        <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.3 }}
-          className={`text-base sm:text-lg lg:text-xl mt-2 ${theme.primary} font-semibold`}
+          className="mt-2 space-y-1"
         >
-          Principal, Darbhanga College of Engineering
-        </motion.p>
+          <p className={`text-base sm:text-lg lg:text-xl ${theme.primary} font-semibold`}>
+            Director, Sub Regional Science City and Innovation Hub, Bodh Gaya
+          </p>
+          <p className={`text-sm sm:text-base ${theme.accent} font-medium`}>
+            Principal, Government Engineering College, Sheikhpura (DSTTE Bihar)
+          </p>
+          <p className={`text-xs sm:text-sm ${theme.accent}`}>
+            Former Principal, Darbhanga College of Engineering
+          </p>
+        </motion.div>
 
         <motion.p
           initial={{ opacity: 0 }}
@@ -38,10 +46,8 @@ export default function HeroSection() {
           transition={{ delay: 0.4 }}
           className={`mt-4 ${theme.accent} leading-relaxed text-sm sm:text-base`}
         >
-          Distinguished academic leader with 25+ years in education, 16 years in
-          cutting-edge research, and 5 years of valuable industry experience.
-          Known for his vision, leadership, and contributions to engineering
-          education.
+          Senior academic administrator, mechanical engineering researcher, and leader in
+          innovation, incubation and entrepreneurship, with 30+ years in academia (more than a decade as Director or Principal) and 5 in industry. Recognized for mobilizing ₹10+ crore in institutional funds, driving national accreditation, and establishing advanced technology hubs.
         </motion.p>
 
         {/* Download CV Button */}
@@ -52,9 +58,10 @@ export default function HeroSection() {
           className="mt-6 flex justify-center lg:justify-start"
         >
           <a
-            href="/cv.docx" // <-- Put cv.pdf inside public/ folder
-            // download
-            className={`inline-flex items-center px-4 sm:px-5 py-2.5 sm:py-3 rounded-lg text-sm sm:text-base ${theme.button} ${theme.buttonHover} transition`}
+            href="/cv.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={`inline-flex items-center px-4 sm:px-5 py-2.5 sm:py-3 rounded-lg text-sm sm:text-base ${theme.button} ${theme.buttonHover} transition cursor-pointer`}
           >
             <FaDownload className="mr-2" /> Download CV
           </a>
@@ -71,8 +78,8 @@ export default function HeroSection() {
         >
           <img
             src="/profile.png"
-            alt="Dr. Sandeep Tiwari"
-            className="w-40 h-40 sm:w-48 sm:h-48 md:w-56 md:h-56 lg:w-64 lg:h-64 rounded-full object-cover"
+            alt="Prof. (Dr.) Sandeep Tiwari"
+            className="w-36 h-36 sm:w-48 sm:h-48 md:w-56 md:h-56 lg:w-64 lg:h-64 rounded-full object-cover"
           />
         </div>
         {/* Decorative Circle (visible only on medium+) */}

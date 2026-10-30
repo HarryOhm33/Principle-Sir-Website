@@ -6,8 +6,10 @@ import {
   FaFileAlt,
   FaGlobe,
   FaGraduationCap,
+  FaUserGraduate,
 } from "react-icons/fa";
 import { useTheme } from "../context/themeContext";
+import BackButton from "../components/BackButton";
 
 export default function Publications() {
   const { theme } = useTheme();
@@ -391,13 +393,15 @@ export default function Publications() {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.8 }}
-      className="max-w-6xl mx-auto px-4 py-12"
+      className="max-w-6xl mx-auto px-4 py-6 sm:py-10 md:py-12"
     >
+      <BackButton />
+
       <motion.div
         initial={{ y: -20, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ delay: 0.2 }}
-        className="mb-12"
+        className="mb-6 sm:mb-8 md:mb-12"
       >
         <h1
           className={`text-4xl font-bold mb-2 ${theme.primary} flex items-center`}
@@ -413,11 +417,11 @@ export default function Publications() {
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
         transition={{ delay: 0.3 }}
-        className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12"
+        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 mb-12"
       >
         <motion.div
           whileHover={{ scale: 1.05 }}
-          className={`${theme.cardBg} p-6 rounded-xl ${theme.shadow} text-center`}
+          className={`${theme.cardBg} p-4 sm:p-6 rounded-xl ${theme.shadow} text-center`}
         >
           <FaGlobe className={`text-4xl mb-3 mx-auto ${theme.secondary}`} />
           <h3 className={`text-xl font-semibold ${theme.text}`}>
@@ -431,7 +435,7 @@ export default function Publications() {
 
         <motion.div
           whileHover={{ scale: 1.05 }}
-          className={`${theme.cardBg} p-6 rounded-xl ${theme.shadow} text-center`}
+          className={`${theme.cardBg} p-4 sm:p-6 rounded-xl ${theme.shadow} text-center`}
         >
           <FaGraduationCap
             className={`text-4xl mb-3 mx-auto ${theme.secondary}`}
@@ -445,7 +449,7 @@ export default function Publications() {
 
         <motion.div
           whileHover={{ scale: 1.05 }}
-          className={`${theme.cardBg} p-6 rounded-xl ${theme.shadow} text-center`}
+          className={`${theme.cardBg} p-4 sm:p-6 rounded-xl ${theme.shadow} text-center`}
         >
           <FaUniversity
             className={`text-4xl mb-3 mx-auto ${theme.secondary}`}
@@ -459,7 +463,7 @@ export default function Publications() {
 
         <motion.div
           whileHover={{ scale: 1.05 }}
-          className={`${theme.cardBg} p-6 rounded-xl ${theme.shadow} text-center`}
+          className={`${theme.cardBg} p-4 sm:p-6 rounded-xl ${theme.shadow} text-center`}
         >
           <FaFileAlt className={`text-4xl mb-3 mx-auto ${theme.secondary}`} />
           <h3 className={`text-xl font-semibold ${theme.text}`}>
@@ -470,6 +474,20 @@ export default function Publications() {
             Published with Springer
           </p>
         </motion.div>
+
+        <motion.div
+          whileHover={{ scale: 1.05 }}
+          className={`${theme.cardBg} p-4 sm:p-6 rounded-xl ${theme.shadow} text-center border ${theme.border}`}
+        >
+          <FaUserGraduate className={`text-4xl mb-3 mx-auto ${theme.secondary}`} />
+          <h3 className={`text-xl font-semibold ${theme.text}`}>
+            Ph.D. Scholars
+          </h3>
+          <p className={theme.accent}>5 Scholars Awarded</p>
+          <p className={`${theme.text} text-sm mt-2`}>
+            Research H-Index: 7
+          </p>
+        </motion.div>
       </motion.div>
 
       {/* International Journal Publications */}
@@ -478,7 +496,7 @@ export default function Publications() {
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
         transition={{ delay: 0.4 }}
-        className="mb-12"
+        className="mb-6 sm:mb-8 md:mb-12"
       >
         <div className="flex items-center mb-6">
           <FaGlobe className={`text-3xl mr-3 ${theme.secondary}`} />
@@ -516,7 +534,7 @@ export default function Publications() {
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
         transition={{ delay: 0.5 }}
-        className="mb-12"
+        className="mb-6 sm:mb-8 md:mb-12"
       >
         <div className="flex items-center mb-6">
           <FaGraduationCap className={`text-3xl mr-3 ${theme.secondary}`} />
@@ -554,7 +572,7 @@ export default function Publications() {
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
         transition={{ delay: 0.6 }}
-        className="mb-12"
+        className="mb-6 sm:mb-8 md:mb-12"
       >
         <div className="flex items-center mb-6">
           <FaUniversity className={`text-3xl mr-3 ${theme.secondary}`} />
@@ -622,6 +640,57 @@ export default function Publications() {
           ))}
         </div>
       </motion.div>
+
+      {/* Ph.D. Supervision Section */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ delay: 0.8 }}
+        className="mb-6 sm:mb-8 md:mb-12"
+      >
+        <div className="flex items-center mb-6">
+          <FaUserGraduate className={`text-3xl mr-3 ${theme.secondary}`} />
+          <div>
+            <h2 className={`text-2xl font-semibold ${theme.primary}`}>
+              Ph.D. Supervision (5 Scholars Awarded)
+            </h2>
+            <p className={`text-sm ${theme.accent}`}>
+              Scholars awarded Ph.D. degrees under his supervision
+            </p>
+          </div>
+        </div>
+
+        <div className="space-y-4">
+          {publications.phdSupervision && publications.phdSupervision.map((phd, index) => (
+            <motion.div
+              key={`phd-${index}`}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.05 * index }}
+              whileHover={{ scale: 1.01 }}
+              className={`${theme.cardBg} p-5 rounded-lg ${theme.shadow} ${theme.border} border border-l-4 ${theme.secondary}`}
+            >
+              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-1">
+                <h3 className={`text-lg font-semibold ${theme.text}`}>
+                  {phd.scholar}
+                </h3>
+                <span className={`px-2.5 py-0.5 rounded ${theme.secondaryBg} text-xs font-semibold mt-1 sm:mt-0 self-start sm:self-auto`}>
+                  Awarded {phd.year}
+                </span>
+              </div>
+              <p className={`text-sm font-medium ${theme.primary} mb-1`}>
+                {phd.institution}
+              </p>
+              <p className={`${theme.text} text-sm`}>
+                <span className="font-semibold">Research Topic: </span>
+                {phd.topic}
+              </p>
+            </motion.div>
+          ))}
+        </div>
+      </motion.div>
     </motion.section>
   );
 }
+
